@@ -1,0 +1,273 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 29px;
+}
+
+.title::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    height: 5px;
+    width: 80px;
+    background-color: #3984f3;
+}
+
+.descr {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 24px;
+    margin-top: 30px;
+    color: grey; 
+}
+
+.header {
+    padding: 20px 0;
+}
+
+.header .header__logo {
+    display: block;
+    width: 10%;
+}
+
+.header .header__logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    min-height: 550px;
+    padding: 140px 0;
+    background: url(../img/main_bg.png) bottom right / contain no-repeat ;
+}
+
+.main .main__wrap {
+    width: 400px;
+}
+
+.main .main__wrap .main__title {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.main .main__wrap .main__btn {
+    margin-top: 30px;
+    cursor: pointer;
+    width: 150px;
+    height: 35px;
+    background-color: #3984f3;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    font-weight: 300;
+    transition: 0.2s all;
+}
+
+.main .main__wrap .main__btn:hover {
+    background-color: #2470e1;
+}
+
+.amazing {
+    padding: 140px 0;
+    min-height: 500px;
+}
+
+.amazing .descr{
+    text-align: center;
+}
+
+.amazing .amazing__wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.amazing .amazing__wrap .amazing__item {
+    flex-shrink: 0;
+    padding: 350px 20px 0 20px;
+    margin: 0 40px;
+    width: 350px;
+    height: 400px;
+    box-shadow: 1px -98px 46px -10px rgba(34, 60, 80, 0.44) inset;
+}
+
+.amazing .amazing__wrap .amazing__item .amazing__item-title{
+    color: #fff;
+    font-weight: 300;
+    font-size: 19px;
+} 
+
+@keyframes slider-right {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-340px);
+    }
+    100% {
+        transform: translateX(-555px);
+    }
+}
+
+@keyframes slider-left {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(340px);
+    }
+    100% {
+        transform: translateX(555px);
+    }
+}
+
+.amazing .amazing__switches{
+    margin-top: 100px;
+    position: relative;
+}
+
+
+.amazing .amazing__switches img{
+    display: block;
+    height: 25px;
+    cursor: pointer;
+}
+
+.amazing .amazing__switches img#right {
+    position: absolute;
+    left: 55%;
+    top: -17%;;
+}
+
+.amazing .amazing__switches img#left{
+    position: absolute;
+    left: 45%;
+    top: -17%;
+}
+
+#right:hover ~ .amazing__wrap{
+    animation: slider-right 7s linear alternate 1;
+}
+
+#left:hover ~ .amazing__wrap{
+    animation: slider-left 7s linear alternate 1;
+}
+
+.reviews {
+    min-height: 300px;
+    padding-bottom: 140px;
+}
+
+.reviews .descr{
+    text-align: center;
+    color: #000;
+    font-weight: 400;
+}
+
+.reviews .reviews__person .reviews__person-img{
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background-color: red;
+    overflow: hidden;
+}
+
+.reviews .reviews__person .reviews__person-img img{
+    display: block;
+    height: 100%;
+}
+
+.reviews .reviews__person .reviews__person-name{
+    margin-top: 15px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 22px;
+} 
+
+.sale {
+    padding: 140px 0;
+    background: url(../img/form_bg.jpg) center center / cover no-repeat;
+    min-height: 300px;
+}
+
+.sale .sale__title {
+    text-align: center;
+    color: #fff;
+    font-size: 34px;
+}
+
+.sale .sale__form {
+    display: flex;
+    margin-top: 70px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.sale .sale__form select, input{
+    padding: 0 10px;
+    width: 25%;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: block;
+    outline: 0 !important;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.sale .sale__form .sale__form-btn{
+    width: 170px;
+    background-color: #3984f3;
+    border: none;
+    color: #fff;
+    font-weight: 300;
+    font-size: 16px;
+    transition: 0.2s all;
+}
+
+.sale .sale__form .sale__form-btn:hover{
+    background-color: #2470e1;
+}
+
+.footer {
+    padding: 35px 0;
+    min-height: 120px;
+}
+
+.footer .footer__logo {
+    display: block;
+    height: 30px;
+}
+
+.footer .footer__logo img{
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.footer .footer__desc {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.footer .footer__desc span{
+    color: grey;
+}
